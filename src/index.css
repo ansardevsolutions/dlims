@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fcfbf5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@theme {
+  --color-dlims-green: #38a544;
+  --color-dlims-dark-green: #1a4d2e;
+  --color-dlims-orange: #f2921d;
+  --color-cream-bg: #fcfbf5;
+  --color-gray-text: #666666;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream-bg);
+  color: #333333;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .header-nav-link {
+    @apply text-[11.5px] font-bold text-[#555] hover:text-[var(--color-dlims-green)] transition-colors whitespace-nowrap px-1;
+  }
+  
+  .btn-pill-gray {
+    @apply bg-[#e5e7eb] text-[#444] px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-tight hover:bg-gray-300 transition-all;
+  }
+  
+  .btn-pill-green {
+    @apply bg-[var(--color-dlims-dark-green)] text-white px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-tight hover:bg-black transition-all;
+  }
+}
