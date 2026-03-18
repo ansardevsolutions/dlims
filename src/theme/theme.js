@@ -82,7 +82,48 @@ const theme = createTheme({
     borderRadius: 8,
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          scrollbarWidth: 'thin',
+          scrollbarColor: '#38a544 #f5f5f5',
+          '&::-webkit-scrollbar': {
+            width: '12px',
+          },
+          '&::-webkit-scrollbar-track': {
+            background: '#f5f5f5',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: '#38a544',
+            borderRadius: '6px',
+            '&:hover': {
+              background: '#2e7d32',
+            },
+          },
+        },
+        body: {
+          scrollbarWidth: 'thin',
+          scrollbarColor: '#38a544 #f5f5f5',
+          '&::-webkit-scrollbar': {
+            width: '12px',
+          },
+          '&::-webkit-scrollbar-track': {
+            background: '#f5f5f5',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: '#38a544',
+            borderRadius: '6px',
+            '&:hover': {
+              background: '#2e7d32',
+            },
+          },
+        },
+      },
+    },
     MuiButton: {
+      defaultProps: {
+        disableRipple: true,
+      },
       styleOverrides: {
         root: {
           borderRadius: '50px',
@@ -92,6 +133,17 @@ const theme = createTheme({
           boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
           '&:hover': {
             boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
+          },
+          '&:focus': {
+            outline: 'none',
+          },
+        },
+        text: {
+          '&:hover': {
+            backgroundColor: 'transparent',
+          },
+          '&:focus': {
+            backgroundColor: 'transparent',
           },
         },
         contained: {
